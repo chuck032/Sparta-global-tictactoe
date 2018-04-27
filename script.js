@@ -64,9 +64,12 @@ var checkPlay = false;
 function validatePlay(squareplayed) {
 	if ( $(squareplayed).hasClass('empty') ) {
 		checkPlay = true;
+    checkWin()
 	} else {
 		checkPlay = false;
+    checkWin()
 		return false;
+
 	}
 }
 
@@ -91,7 +94,7 @@ $('.square').on('click', function play() {
 		$(this).removeClass('empty');
 		$(this).addClass('X');
 		$(this).html("X");
-    checkWin()
+
 
 	}
 	else if (checkPlay && !(count % 2)){
@@ -99,7 +102,7 @@ $('.square').on('click', function play() {
 		$(this).removeClass('empty');
 		$(this).addClass('O');
 		$(this).html("O");
-    checkWin()
+
 		}
 
 		else {
@@ -109,17 +112,27 @@ $('.square').on('click', function play() {
 });
 
 function checkWin(){
-  if ($(sq1).text()==$(sq2).text()==$(sq3).text() || $(sq1).text()==$(sq4).text()==$(sq7).text() || $(sq1).text()==$(sq5).text()==$(sq9).text()){
-   alert($(sq1).text() + "has won")
-  }if ($(sq2).text()==$(sq5).text()==$(sq8).text()){
-   alert($(sq2).text() + "has won")
-  }if ($(sq3).text()==$(sq6).text()==$(sq9).text() || $(sq3).text()==$(sq5).text()==$(sq7).text()){
-   alert($(sq3).text() + "has won")
-  }if ($(sq4).text()==$(sq5).text()==$(sq6).text()){
-   alert($(sq4).text() + "has won")
-  }if ($(sq7).text()==$(sq8).text()==$(sq9).text()){
-   alert($(sq7).text() + "has won")
-  }
+  if (sq1.hasClass("X") && sq2.hasClass("X") && sq3.hasClass("X") || sq1.hasClass("X") && sq4.hasClass("X") && sq7.hasClass("X") || sq1.hasClass("X") && sq5.hasClass("X") && sq9.hasClass("X")){
+   alert("X has won");
+ }else if (sq2.hasClass("X") && sq5.hasClass("X") && sq8.hasClass("X")){
+   alert("X has won");
+ }else if (sq3.hasClass("X") && sq6.hasClass("X") && sq9.hasClass("X") || sq3.hasClass("X") && sq5.hasClass("X") && sq7.hasClass("X")){
+   alert("X has won");
+ }else if (sq4.hasClass("X") && sq5.hasClass("X") && sq6.hasClass("X")){
+   alert("X has won");
+ }else if (sq7.hasClass("X") && sq8.hasClass("X") && sq9.hasClass("X")){
+   alert("X has won");
+ } else if (sq1.hasClass("O") && sq2.hasClass("O") && sq3.hasClass("O") || sq1.hasClass("O") && sq4.hasClass("O") && sq7.hasClass("O") || sq1.hasClass("O") && sq5.hasClass("O") && sq9.hasClass("O")){
+  alert("O has won");
+}else if (sq2.hasClass("O") && sq5.hasClass("O") && sq8.hasClass("O")){
+  alert("O has won");
+}else if (sq3.hasClass("O") && sq6.hasClass("O") && sq9.hasClass("O") || sq3.hasClass("O") && sq5.hasClass("O") && sq7.hasClass("O")){
+  alert("O has won");
+}else if (sq4.hasClass("O") && sq5.hasClass("O") && sq6.hasClass("O")){
+  alert("O has won");
+}else if (sq7.hasClass("O") && sq8.hasClass("O") && sq9.hasClass("O")){
+  alert("O has won");
+ }
 }
 
 $('#reset').on('click', function() {
