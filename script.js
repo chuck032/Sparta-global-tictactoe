@@ -31,14 +31,18 @@ $(document).ready(function() {
 
   var count = 0;
   $('.square').on('click', function play() {
-   count++;
+   // count++;
   	validatePlay(this);
   	if (checkPlay && (count % 2)) {
+      count++;
+      $("#playerTurn").html("It is O's turn");
   		$(this).removeClass('empty');
   		$(this).addClass('X');
   		$(this).html("X");
   	}
   	else if (checkPlay && !(count % 2)){
+      count++;
+      $("#playerTurn").html("It is X's turn");
   		$(this).removeClass('empty');
   		$(this).addClass('O');
   		$(this).html("O");
