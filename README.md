@@ -1,16 +1,20 @@
 # Sparta-global-tictactoe
 
-JQuery Selectors and Events - TicTacToe
+Instructions for use:
 
-You challenge is build the game TicTacToe in the browser using JQuery. We will give you the html layout for the game. We will need you to use what you have learnt so far with selecting things with JQuery and creating event listeners with JQuery to create this game.
+* To use this project git clone the repository to your computer.
+* Enter the project and open the html file. To view the code you can open the html file in a text editor.
 
-Your deliverables:-
+## JQuery Selectors and Events - TicTacToe
 
-1) Git repo with Dev and Master branches
-2) Finished README.md with brief, what went well, the challenges and list of what you delivered
-3) pull-request submitted by 9:00am tomorrow
-4) The game should display the correct 'X' or 'Y' for each button pressed in the browser
-5) Once a tile has been clicked it should not be able to be clicked again
-6) The clear button should clear the board
-7) When a winning condition is present you should display and winner, wither X or Y
-8) The program should use functions, loops, JQuery selectors and JQuery events
+For this project I was required to build the game TicTacToe in the browser using JQuery. I was provided with the html layout for the game. I needed to use what I had learnt so far with selecting things with JQuery and creating event listeners with JQuery to create this game.
+
+Requirements:
+
+* The game should display the correct 'X' or 'O' for each button pressed in the browser
+* Once a tile has been clicked it should not be able to be clicked again
+* The reset button should clear the board
+* When a winning condition is present you should display and winner, wither X or O
+* The program should use functions, JQuery selectors and JQuery events
+
+![Tictactoe screenshot](css/images/SS.png)
