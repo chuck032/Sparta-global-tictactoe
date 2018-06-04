@@ -17,4 +17,4 @@ Requirements:
 * When a winning condition is present you should display and winner, wither X or O
 * The program should use functions, JQuery selectors and JQuery events
 
-![Tictactoe screenshot](css/images/SS.png)
+![Tictactoe screenshot](css/SS.png)
